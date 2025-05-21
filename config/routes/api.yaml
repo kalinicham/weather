@@ -1,0 +1,6 @@
+api_weather:
+  path: /api/weather/{city}
+  controller: App\Controller\Api\WeatherController::getWeather
+  methods: [GET]
+  defaults:
+    city: Kyiv

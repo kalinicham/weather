@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Weather in {{ title }} {% endblock %}
+
+{% block body %}
+    {% if weatherData.error is defined %}
+        <h2 style="color: red;">{{ weatherData.error }}</h2>
+    {% else %}
+        <h1>Weather in {{ weatherData.city }}</h1>
+
+        <ul>
+            <li> Current weather in {{ weatherData.city }}, {{ weatherData.country }}:</li>
+            <li> Temperature: {{ weatherData.temperature }} °C</li>
+            <li> State: {{ weatherData.condition }}</li>
+            <li> Humidity: {{ weatherData.humidity }}</li>
+            <li> Wind speed: {{ weatherData.wind_speed }} km/h</li>
+            <li> Last update: {{ weatherData.last_updated }}</li>
+        </ul>
+    {% endif %}
+{% endblock %}

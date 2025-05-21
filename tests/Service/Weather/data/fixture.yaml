@@ -1,0 +1,10 @@
+location:
+  name: Kyiv
+  country: Ukraine
+current:
+  temp_c: 15
+  condition:
+    text: Sunny
+  humidity: 40
+  wind_kph: 10
+  last_updated: '2024-05-21 12:00'
